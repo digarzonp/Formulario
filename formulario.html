@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar.html" method="post">
+    <!---->
+        <fieldset>
+            <legend>Controles del formulario</legend>
+            <!-- Recomendado-->
+            <label for="usuario">Usuario</label>
+            <input type="text" 
+            pattern="[A-Za-z]{0-5}" 
+            id="usuario"
+            name="usuario" 
+            value="paulo"
+            title="Ingresar un nombre maximo 5 letras"
+            placeholder="Ingrese dato"
+            required >
+
+            <br>
+            <br>
+
+            <label for="Correo">Correo  </label>
+            <input type="email" 
+            size="40"
+            id="correo"
+            name="correo"
+            multiple>
+
+            <br>
+            <br>
+
+            <label for="telefono">Telefono </label>
+            <input type="tel" 
+            id="tel"
+            required
+            name="tel">
+
+            <br>
+            <br>
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <br>
+            <br>
+            <!--Radio-->
+            <label for="Joven">Joven</label>
+            <input type="radio" id="Joven" name="edad" value="0-25">
+            <label for="Adulto">Adulto</label>
+            <input type="radio" id="Adulto" name="edad" value="26-55">
+            <label for="Adulto Mayor">Adulto Mayor</label>
+            <input type="radio" id="Adulto Mayor" name="edad" value="más 55">
+            
+            <br>
+            <br>
+
+            <label for="rango">Rango:</label>
+            <input type="range" id="ingreso" name="ingreso" min="0" max="100">
+            
+            <br>
+            <br>
+            <!--se puede seleccionar varios elementos-->
+            <label for="terminos">Termino</label>
+            <input type="checkbox" name="terminos" id="terminos" value="si">
+            
+            <br>
+            <br>
+
+            <select id="pais" name="pais">
+                <option value="Co">Colombia</option>
+                <option value="br">Brasil</option>
+                <option value="ca" selected>Canada</option> <!--esta sellecionado de manera predeterminada-->
+                <option value="br">Ecuador</option>
+            </select>
+
+            <br>
+            <br>
+            <!--Para textos de varias lineas-->
+            <textarea name="datos" id="datos" cols="30" rows="10">
+            </textarea>
+
+            
+            <!--Boton para enviar los datos-->
+            <input type="submit">
+            <button type="reset">Borrar</button> 
+            <button type= "submit">Enviar</button> 
+            
+
+              <!--dos botones, uno usando un metodo HTM y el otro un event listener -->
+            <button type="button" 
+            onclick="mostrarmensaje()">
+            Boton
+            </button>
+
+            <button type="button" 
+            id="otroBoton">
+            Boton 2
+            </button>
+
+        </fieldset>
+    </form>
+    <script src="programa.js"></script>
+</body>
+</html>
